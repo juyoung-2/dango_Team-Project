@@ -110,14 +110,21 @@ http://localhost:8089/dango/
 ---
 
 ## 프로젝트 구조
+프로젝트는 Controller - Service - DAO - Mapper 구조를 기반으로 구성했으며,  
+단어 학습과 커뮤니티 기능을 패키지 단위로 분리해 관리했습니다.
+
 ```bash
 dango
-├─ src
-│  ├─ main
-│  │  ├─ java
-│  │  ├─ resources
-│  │  └─ webapp
-│  └─ test
+├─ src/main/java
+│  └─ com.threeteam.dango
+│     ├─ controller
+│     ├─ dao
+│     ├─ domain
+│     ├─ mapper
+│     ├─ service
+│     └─ vo
+├─ src/main/resources
+├─ src/main/webapp
 ├─ pom.xml
 └─ README.md
 ```
