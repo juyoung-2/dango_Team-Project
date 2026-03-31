@@ -1,0 +1,58 @@
+.register_area{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register_page{
+    border:1px solid rgb(228, 228, 228);
+    width:400px;
+    height:1000px;
+    box-shadow: 0 0 5px 1px rgb(197, 197, 197) ;
+}
+.register_logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+.register_title{
+    margin: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.register_input{
+    margin:24px;
+    font-size:14px;
+    font-weight:bold;
+}
+.register_input_font{
+    color: rgb(97, 97, 97);
+    margin-bottom:10px;
+}
+.register_input_input{
+    height: 35px;
+    width: 344px;
+    border: 1px solid rgb(212, 212, 212);
+}
+.register_input_input::placeholder{
+    color: rgb(175, 175, 175);
+}
+.register_input_warning{
+    font-weight: bolder;
+    font-family: "곧음";
+    color: red;
+    font-size: 12px;
+    margin: 5px
+}
+.register_agreed{
+    border-top: 1px solid rgb(185, 185, 185);
+    margin: 20px;
+}
+.register_agreed_font{
+    color: rgb(97, 97, 97);
+    font-size: 14px;
+    margin: 16px;
+    font-weight: bold;
+}

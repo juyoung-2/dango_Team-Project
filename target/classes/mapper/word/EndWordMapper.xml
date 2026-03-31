@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.threeteam.dango.mapper.word.EndWordMapper">
+
+	<select id="selectByUserIdWordId" resultType="endWordVO">
+		SELECT ENDWORDID, USERID, WORDID, ENDWORDREGISTERDATE, ENDWORDUPDATEDATE
+		FROM T_ENDWORD
+		WHERE USERID=#{userId} AND WORDID=#{wordId}
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO T_ENDWORD(ENDWORDID, USERID, WORDID)
+		VALUES(S_ENDWORD.NEXTVAL, #{userId}, #{wordId})
+	</insert>
+	
+</mapper>

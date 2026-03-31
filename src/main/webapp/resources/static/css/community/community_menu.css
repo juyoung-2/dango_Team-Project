@@ -1,0 +1,16 @@
+nav > a:nth-child(5) {
+    color: rgb(255, 23, 68);
+}
+.Postmenu{
+    display: flex;
+}
+.Postmenu_m{
+    font-size:16px;
+    padding: 5px 12px;
+    font-weight: bold;
+    font-family:'Franklin Gothic Medium','Arial Narrow','Arial, sans-serif';
+}
+.Postmenu_m:hover{
+    color:rgb(243, 71, 71);
+    transition: 0.3s
+}

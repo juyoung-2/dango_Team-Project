@@ -1,0 +1,174 @@
+nav > a:nth-child(3) {
+    color: rgb(255, 23, 68);
+}
+section {
+    margin: 100px auto;
+    width: 1080px;
+}
+#intro {
+    background-color: rgb(200, 200, 200);
+    width: 100%;
+    height: 150px;
+    margin-bottom: 30px;
+}
+#intro-text-area {
+    padding: 30px;
+}
+#intro-text-area > h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.bi-plus-circle-fill {
+    width: 30px;
+    color: rgb(255, 23, 68);
+}
+#no-check-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 20px auto;
+    color: rgb(255, 23, 68);
+    font-weight: bold;
+}
+#no-check-msg > svg {
+    margin-right: 10px;
+}
+#article-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+article {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgb(255, 23, 68);
+    margin: 30px 0;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+.check-btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 999;
+    position: absolute;
+    right: 15%;
+}
+.check-btn > svg {
+    width: 35px;
+}
+.check-btn-on {
+    display: none;
+}
+.check-btn-off {
+    display: block;
+}
+.bi-bookmark-check {
+    color: #BF3131;
+    width: 35px;
+}
+.bi-bookmark-check-fill {
+    color: #BF3131;
+    width: 35px;
+}
+.word{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content:flex-start;
+}
+.word-hurigana {
+    display: flex;
+    flex-direction: column;
+}
+.word-hurigana > a {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.word-hurigana > p {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.mean-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.mean-list > p {
+    margin-bottom: 15px;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 300;
+}
+.wordgroup1{
+	margin-top: 12px;
+	margin-left: 25px;
+	display: flex;
+	flex-direction: row;
+}
+.kanji {
+	font-size: 24px;
+	font-weight: bold;
+}
+.word-level {
+	margin-top:10px;
+	margin-right:14px;
+	height:24px;
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight:bold;
+	color: red;
+}
+.word-word{
+	height:40px;
+	font-size: 30px;
+	font-weight: bold;
+}
+.wordgroup2{
+	margin:auto;
+}
+hr{
+	background: rgb(255, 23, 68);
+    height:1px;
+    border:0;
+}
+
+#dictionary_area {
+    width: 90%;
+    margin: 15px 0;
+    border-collapse: separate;
+    border-spacing: 15px;
+    border: 3px solid rgb(236, 100, 75);
+    border-radius: 8px;
+    padding: 20px;
+    line-height: 2;
+}
+.voca {
+    
+    font-size: 30px;
+    font-weight: 400;
+    padding: 30px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+.word {
+    display: flex;
+    
+}
+.furigana {
+    color: rgb(236, 100, 75);
+    margin-right: 20px;
+}
+.mean {
+    font-size: 20px;
+    font-weight: 200;
+}

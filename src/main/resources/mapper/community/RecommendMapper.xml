@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.threeteam.dango.mapper.community.RecommendMapper">
+
+	<insert id="plusRecommend">
+		INSERT INTO	T_RECOMMEND(RECOMMENDID, USERID, BOARDID) 
+		VALUES(S_RECOMMEND.NEXTVAL, #{userId}, #{boardId})
+	</insert>
+	
+	<delete id="minusRecommend">
+		DELETE FROM T_RECOMMEND
+		WHERE USERID=#{userId} AND BOARDID=#{boardId}
+	</delete>
+	
+	<select id="selectByUserIdBoardId" resultType="integer">
+		SELECT COUNT(RECOMMENDID)
+		FROM T_RECOMMEND
+		WHERE USERID=#{userId} AND BOARDID=#{boardId}
+	</select>
+	
+	<select id="selectCountByBoardId" resultType="integer">
+		SELECT COUNT(RECOMMENDID)
+		FROM T_RECOMMEND
+		WHERE BOARDID=#{boardId}
+	</select>
+	
+</mapper>

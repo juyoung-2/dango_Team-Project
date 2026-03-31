@@ -1,0 +1,124 @@
+nav > a:nth-child(1) {
+    color: rgb(255, 23, 68);
+}
+section {
+    margin: 100px auto;
+    width: 1080px;
+}
+#intro {
+    background-color: rgb(200, 200, 200);
+    width: 100%;
+    height: 150px;
+    margin-bottom: 30px;
+}
+#intro-text-area {
+    padding: 30px;
+}
+#intro-text-area > h1 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+article {
+    margin: 30px 0;
+    border: 4px solid rgb(200, 200, 200);
+    padding: 30px;
+    position: relative;
+    box-sizing: border-box;
+    transition: .3s ease-out;
+}
+article.vibration {
+    animation: vibration .2s infinite;
+}
+
+@keyframes vibration {
+    from {
+      transform: rotate(2deg);
+    }
+    to {
+      transform: rotate(-2deg);
+    }
+}
+
+.right-img {
+    position: absolute;
+    top: 40px;
+    right: 5%;
+    visibility: hidden;
+    transition: 2s ease-out;
+}
+.right-img > svg {
+    width: 150px;
+    color: green;
+}
+.wrong-img {
+    position: absolute;
+    top: 40px;
+    right: 5%;
+    visibility: hidden;
+    transition: 2s ease-out;
+}
+.wrong-img > svg {
+    width: 150px;
+    color: rgb(255, 23, 68);
+}
+
+
+.check-btn {
+    position: absolute;
+    right: 30px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color: rgb(255, 23, 68);
+}
+.korean {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.word-kr {
+    margin: 0 10px;
+    color: rgb(255, 23, 68);
+    font-weight: bold;
+}
+.japanese {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.word-jp {
+    margin: 0 15px;
+    padding: 10px;
+    font-size: 30px;
+    width: 120px;
+    outline: none;
+    border: 1px solid #000;
+    text-align: center;
+}
+.word-jp:focus {
+    border: 1px solid rgb(255, 23, 68);
+}
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+.ok-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgb(255, 23, 68);
+    transition: all 0.2s ease 0s;
+    
+}
+.ok-btn:hover {
+    color: #fff;
+    background-color: rgb(255, 23, 68);
+}
+

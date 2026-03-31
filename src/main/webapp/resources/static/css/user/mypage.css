@@ -1,0 +1,93 @@
+section {
+    margin: 120px auto 0;
+    width: 1080px;
+}
+section > form > p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+section > form > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#text-div {
+    width: 60%;
+}
+.input-div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.input-div > input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    font-size: 24px;
+    outline: none;
+}
+.input-div > input:focus {
+    border: 1px solid rgb(255, 23, 68);
+}
+
+#profile-label {
+    background-color: #fff;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+#profile-label:hover {
+    filter: brightness(70%);
+    transition: all 0.1s ease-out;
+}
+#profile {
+    display: none;
+}
+.profile-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+
+#btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.btn {
+    width: 200px;
+    height: 50px;
+    margin: 0 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#cancel {
+    background-color: #fff;
+    border: 1px solid rgb(200, 200, 200);
+    color: #000;
+    transition: all 0.1s ease-out;
+}
+#cancel:hover {
+    color: rgb(255, 23, 68);
+    border: 1px solid rgb(255, 23, 68);;
+}
+#save {
+    background-color: rgb(255, 23, 68);
+    border: 1px solid transparent;
+    color: #fff;
+}
+#save:hover {
+    background-color:rgba(225, 23, 68, 0.8)
+}

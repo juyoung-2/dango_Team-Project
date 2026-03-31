@@ -1,0 +1,58 @@
+#footer-logo {
+    font-family: "Nico Moji";
+    font-size: 36px;
+    color: rgb(255, 23, 68);
+}
+
+.wrapper {
+	min-height: (100%-200px);
+	position: relative;
+}
+
+
+footer {
+	position: relative;
+	height: 250px;
+	width: 100%;
+	bottom: 0;
+	margin: 100px auto 0;
+	background-color: #dcdcdc;
+	transform: translatY(-100%);
+	border-top: 1px solid rgb(200, 200, 200);
+}
+
+footer > p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+footer > p > span {
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.footer_Box {
+	width: 1080px;
+	margin: 0 auto;
+	padding: 50px 0;
+	display: flex;
+	flex-direction: column;
+}
+.footer_Box > p {
+	font-size: 14px;
+	font-weight: 300;
+}
+#footer-first-line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+#service-link > a {
+	margin-left: 20px;
+	font-weight: 550;
+}
+#else-info > p {
+	margin-bottom: 10px;
+}

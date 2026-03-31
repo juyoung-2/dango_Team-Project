@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.threeteam.dango.mapper.word.WrongMapper">
+
+	<select id="selectAllByUserId" resultType="sentenceDTO">
+		SELECT O.WORDID, WORDWORD, WORDFURIGANA, WORDMEAN, WORDLEVEL, EXFRONTJP, EXBACKJP, EXFRONTKR, EXBACKKR, WRONGNUM, WRONGID
+		FROM (
+			SELECT W.WORDID, WORDWORD, WORDFURIGANA, WORDMEAN, WORDLEVEL, WRONGNUM, WRONGID
+			FROM T_WORD W JOIN T_WRONG R ON W.WORDID = R.WORDID
+			WHERE USERID = #{userId}
+		) O JOIN T_EX E ON O.WORDID = E.WORDID
+	</select>
+	
+	<select id="selectByUserIdWordId" resultType="wrongVO">
+		SELECT WRONGID, WORDID, USERID, WRONGNUM, WRONGREGISTERDATE, WRONGUPDATEDATE
+		FROM T_WRONG
+		WHERE USERID = #{userId} AND WORDID = #{wordId}
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO T_WRONG(WRONGID, USERID, WORDID)
+		VALUES(S_WRONG.NEXTVAL, #{userId}, #{wordId})
+	</insert>
+	
+	<update id="update">
+		UPDATE T_WRONG
+		SET WRONGNUM = #{wrongNum}, WRONGUPDATEDATE=SYSDATE
+		WHERE WRONGID = #{wrongId}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM T_WRONG
+		WHERE WRONGID = #{wrongId}
+	</delete>
+	
+</mapper>

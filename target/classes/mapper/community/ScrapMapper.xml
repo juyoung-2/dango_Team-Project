@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.threeteam.dango.mapper.community.ScrapMapper">
+
+	<insert id="addScrap">
+		INSERT INTO T_SCRAP 
+		(SCRAPID, USERID, BOARDID) 
+		VALUES
+		(S_SCRAP.NEXTVAL, #{userId}, #{boardId})
+	</insert>
+	
+	<delete id="deleteScrap">
+		DELETE FROM T_SCRAP
+		WHERE USERID = #{userId} AND BOARDID = #{boardId}
+	</delete>
+	
+	<select id="getScrap" resultType="ScrapVO">
+		SELECT * FROM T_SCRAP 
+		WHERE USERID = #{userId} AND BOARDID = #{boardId}
+	</select>
+	
+	<select id="getScrapList" resultType="boardDTO">
+		SELECT D.BOARDID, BOARDTITLE, D.USERID, BOARDMAIN, BOARDNOTICE, BOARDVIEWS, BOARDREGISTERDATE, BOARDUPDATEDATE, RECOMMENDS
+		FROM T_SCRAP S JOIN (
+		SELECT B.BOARDID, BOARDTITLE, B.USERID, BOARDMAIN, BOARDNOTICE, BOARDVIEWS, BOARDREGISTERDATE, BOARDUPDATEDATE, J.RECOMMENDS
+		FROM T_BOARD B JOIN (SELECT O.BOARDID, COUNT(R.BOARDID) AS RECOMMENDS FROM T_RECOMMEND R RIGHT JOIN T_BOARD O ON R.BOARDID = O.BOARDID GROUP BY O.BOARDID) J ON B.BOARDID = J.BOARDID
+		ORDER BY J.BOARDID DESC
+		) D ON S.BOARDID = D.BOARDID
+		WHERE S.USERID=#{userId}
+		ORDER BY SCRAPID DESC
+	</select>
+	
+</mapper>

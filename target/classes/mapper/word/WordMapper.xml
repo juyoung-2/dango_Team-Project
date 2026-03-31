@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.threeteam.dango.mapper.word.WordMapper">
+
+	<select id="selectSentenceList" resultType="sentenceDTO">
+		SELECT W.WORDID, WORDWORD, WORDFURIGANA, WORDMEAN, WORDLEVEL, EXFRONTJP, EXBACKJP, EXFRONTKR, EXBACKKR
+		FROM (
+		SELECT O.WORDID, WORDWORD, WORDFURIGANA, WORDMEAN, WORDLEVEL, WORDREGISTERDATE, WORDUPDATEDATE
+		FROM T_WORD O LEFT JOIN T_ENDWORD N ON O.WORDID = N.WORDID
+		WHERE USERID != #{userId} OR USERID IS NULL
+		) W JOIN T_EX E ON W.WORDID = E.WORDID
+		WHERE W.WORDLEVEL = #{wordLevel}
+		ORDER BY W.WORDID
+	</select>
+	
+	<select id="selectSentenceByWordId" resultType="sentenceDTO">
+		SELECT W.WORDID, WORDWORD, WORDFURIGANA, WORDMEAN, WORDLEVEL, EXFRONTJP, EXBACKJP, EXFRONTKR, EXBACKKR
+		FROM T_WORD W JOIN T_EX E ON W.WORDID = E.WORDID
+		WHERE W.WORDID = #{wordId}
+	</select>
+	
+	<select id="selectAllByKeyword" resultType="wordVO">
+		SELECT WORDID, WORDWORD, WORDFURIGANA, WORDMEAN, WORDLEVEL, WORDREGISTERDATE, WORDUPDATEDATE
+		FROM T_WORD
+		WHERE WORDWORD LIKE '%' || #{keyword} || '%' OR WORDFURIGANA LIKE '%' || #{keyword} || '%' OR WORDMEAN LIKE '%' || #{keyword} || '%'
+	</select>
+	
+</mapper>

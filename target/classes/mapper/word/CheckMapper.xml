@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.threeteam.dango.mapper.check.CheckMapper">
+
+	<select id="isCheck" resultType="checkVO">
+		SELECT * FROM T_CHECK WHERE USERID=#{userId} AND WORDID=#{wordId}
+	</select>
+	
+	<insert id="onCheck">
+		INSERT INTO T_CHECK(CHECKID, USERID, WORDID)
+		VALUES(S_CHECK.NEXTVAL, #{userId}, #{wordId})
+	</insert>
+	
+	<delete id="offCheck">
+		DELETE FROM T_CHECK WHERE USERID=#{userId} AND WORDID=#{wordId}
+	</delete>
+	
+	<select id="getCheckList" resultType="wordVO">
+		SELECT W.WORDID, WORDWORD, WORDFURIGANA, WORDMEAN, WORDLEVEL
+		FROM T_CHECK C JOIN T_WORD W ON C.WORDID = W.WORDID
+		WHERE USERID=#{userId}
+		ORDER BY CHECKREGISTERDATE DESC
+	</select>
+	
+</mapper>

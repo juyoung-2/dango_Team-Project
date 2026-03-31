@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.threeteam.dango.mapper.community.CommentMapper">
+
+	<insert id="addComment">
+		<selectKey keyProperty="commentId" resultType="long" order="BEFORE">
+			SELECT S_COMMENT.NEXTVAL FROM DUAL
+        </selectKey>
+		INSERT INTO T_COMMENT 
+		(COMMENTID, COMMENTMAIN, USERID, BOARDID) 
+		VALUES 
+		(#{commentId}, #{commentMain}, #{userId}, #{boardId})
+	</insert>
+	
+	<delete id="deleteComment">
+		DELETE FROM T_COMMENT 
+		WHERE COMMENTID=#{commentId}
+	</delete>
+	
+	<delete id="deleteCommentAllByBoardId">
+		DELETE FROM T_COMMENT
+		WHERE BOARDID=#{boardId}
+	</delete>
+	
+	<update id="updateComment">
+		UPDATE T_COMMENT SET COMMENTMAIN=#{commentMain}, COMMENTUPDATEDATE=SYSDATE
+		WHERE COMMENTID=#{commentId}
+	</update>
+	
+	<select id="getComment" resultType="CommentVO">
+		SELECT * FROM T_COMMENT 
+		WHERE COMMENTID=#{commentId}
+	</select>	
+	
+	<select id="getCommentList" resultType="CommentDTO">
+		SELECT COMMENTID, c.USERID, BOARDID, COMMENTMAIN, COMMENTREGISTERDATE, COMMENTUPDATEDATE, USERPROFILE
+		FROM T_COMMENT c JOIN T_USER u ON c.USERID = u.USERID
+		WHERE BOARDID = #{boardId}
+		ORDER BY COMMENTID ASC
+	</select>
+	
+</mapper>

@@ -1,0 +1,263 @@
+strong{
+    color: rgb(255, 23, 68);
+}
+sub{
+    color: rgb(102, 102, 102);
+    display: flex;
+    align-items: end;
+    margin: 0 10px;
+    font-size: 10px;
+}
+.mainpagearea{
+    width: 1080px;
+    margin: 90px auto;
+}
+.mainbannerarea{
+    width: 100%;
+    height: 150px;
+    background-color: gray;
+}
+.mainpagetitlearea{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+}
+.mainpagetitle{
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.mainpagecontentarea{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 100%;
+}
+.mainpagecontenttitle{
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.contenttitle{
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+}
+.contentmore{
+    font-weight: bold;
+}
+.mainwordarea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.dictionarywordalign{
+    margin-top: 40px;
+    display: flex;
+}
+.mainpagedictionaryword{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 150px;
+    height: 80px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.dictionarywordJP{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 20px
+}
+
+
+.search_banner{
+    margin-top: 80px;
+    display: flex;
+    width: 100%;
+    height: 80px;
+}
+.search_bar{
+    margin: auto 0;
+    width: 300px;
+    height: 25px;
+    border: 1px solid #bdbdbd;
+    color: #727272;
+}
+.search_button{
+    margin: auto 0;
+    margin-left: 30px;
+    width: 32px;
+    height: 29px;
+    background-color: white;
+    border: 1px solid #bdbdbd;
+    border-radius: 0;
+    color: #727272;
+}
+.new_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-right: 10px;
+    width: 160px;
+    height: 40px;
+    background-color: #d83b3b;
+    color: #ffffff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.new_text:hover{
+    background-color:#f05c68;
+    transition: 0.5s;
+}
+.Commu_box{
+    margin: auto;
+    width: 1000px;
+    height: 1000px;
+}
+.CoummnityClass{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(225, 245, 245);
+    width: 95%;
+}
+.CoummnityClasshead{
+    display: flex;
+    flex-direction: row;
+}
+.CoummnityClassTitle{
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.CoummnityClassText{
+    margin-top: 3px;
+    margin-left: 20px;
+    font-size: 12px;
+}
+.CoummnityClassLink{
+    font-size: 12px;
+    font-weight: bold;
+}
+.title{
+    display: flex;
+    justify-items: center;
+    height: 80px;
+    background-color: #ffffff;
+}
+.title_name{
+    font-size: 20px;
+    margin: auto;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.title_more{
+    margin: auto;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.textbox{
+    display: flex;
+    justify-items: center;
+    margin-left: 20px;
+    height: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: black;
+    text-decoration-line: none;
+}
+.textbox:hover{
+    background-color:#c4c4c4;
+    transition: 0.3s;
+}
+.textbox_info{
+    display: flex;
+    margin: auto;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #727272;
+}
+.textbox_title{
+    margin: auto;
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+article {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgb(255, 23, 68);
+    margin: 30px 20px;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+.check-btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 999;
+    position: absolute;
+    right: 15%;
+}
+.check-btn > svg {
+    width: 35px;
+}
+.check-btn-on {
+    display: none;
+}
+.check-btn-off {
+    display: block;
+}
+.bi-bookmark-check {
+    color: #BF3131;
+    width: 35px;
+}
+.bi-bookmark-check-fill {
+    color: #BF3131;
+    width: 35px;
+}
+
+.word-hurigana {
+    display: flex;
+    flex-direction: column;
+}
+.word-hurigana > a {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.word-hurigana > p {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.mean-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.mean-list > p {
+    margin-bottom: 15px;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 300;
+}

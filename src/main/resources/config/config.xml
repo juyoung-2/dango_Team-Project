@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.threeteam.dango.domain.word.WordVO" alias="wordVO"/>
+		<typeAlias type="com.threeteam.dango.domain.word.SentenceDTO" alias="sentenceDTO"/>
+		<typeAlias type="com.threeteam.dango.domain.word.WrongVO" alias="wrongVO"/>
+		<typeAlias type="com.threeteam.dango.domain.word.EndWordVO" alias="endWordVO"/>
+		<typeAlias type="com.threeteam.dango.domain.check.CheckVO" alias="checkVO"/>
+		
+		<!-- Community -->
+		<typeAlias type="com.threeteam.dango.vo.community.BoardVO" alias="boardVO" />
+		<typeAlias type="com.threeteam.dango.vo.community.BoardDTO" alias="boardDTO" />
+		<typeAlias type="com.threeteam.dango.vo.community.CommentVO" alias="CommentVO" />
+		<typeAlias type="com.threeteam.dango.vo.community.CommentDTO" alias="CommentDTO" />
+		<typeAlias type="com.threeteam.dango.vo.community.RecommendVO" alias="RecommendVO" />
+		<typeAlias type="com.threeteam.dango.vo.community.ReplyVO" alias="ReplyVO" />
+		<typeAlias type="com.threeteam.dango.vo.community.ScrapVO" alias="ScrapVO" />
+		<typeAlias type="com.threeteam.dango.domain.recent.RecentVO" alias="recentVO"/>
+		
+		<typeAlias type="com.threeteam.dango.domain.user.UserVO" alias="userVO"/>
+
+	</typeAliases>
+</configuration>

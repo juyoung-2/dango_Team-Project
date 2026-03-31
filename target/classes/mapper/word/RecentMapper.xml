@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.threeteam.dango.mapper.recent.RecentMapper">
+	
+	<select id="isRecent" resultType="recentVO">
+		SELECT * FROM T_RECENT WHERE USERID=#{userId} AND WORDID=#{wordId}
+	</select>
+	
+	<insert id="setRecent">
+		INSERT INTO T_RECENT(RECENTID, USERID, WORDID)
+		VALUES(S_RECENT.NEXTVAL, #{userId}, #{wordId})
+	</insert>
+	
+	<update id="updateRecent">
+		UPDATE T_RECENT
+		SET RECENTUPDATEDATE=SYSDATE
+		WHERE USERID=#{userId} AND WORDID=#{wordId}
+	</update>
+	
+	<select id="getRecentList" resultType="wordVO">
+		SELECT W.WORDID, WORDWORD, WORDFURIGANA, WORDMEAN, WORDLEVEL
+		FROM T_RECENT R JOIN T_WORD W ON R.WORDID = W.WORDID
+		WHERE USERID=#{userId}
+		ORDER BY RECENTUPDATEDATE DESC
+	</select>
+	
+</mapper>

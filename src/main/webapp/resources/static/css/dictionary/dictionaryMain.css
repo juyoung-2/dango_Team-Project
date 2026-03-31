@@ -1,0 +1,201 @@
+nav > a:nth-child(4) {
+    color: rgb(255, 23, 68);
+}
+
+#container {
+	margin-top: 100px;
+}
+
+#content {
+	width: 900px;
+    margin: 0 auto;
+    vertical-align: top;
+}
+
+#aside {
+	display: table-cell;
+	width: 15%;
+    padding: 0 0 30px 25px;
+    vertical-align: top;
+}
+
+.aside_right {
+	float: right;
+	margin: 30px;
+	padding: 0;
+}
+
+.aside_left {
+	float: left;
+	margin: 110px;
+	padding: 0;
+	text-align: center;
+}
+
+#conversation_view {
+	padding-top: 0;
+	border-top: 0;
+	margin: 60px 0 -14px;
+	line-height: 200%;
+}
+#conversation_view > h3 {
+	margin-left:20px;
+	font-size: 21px;
+	font-weight: bold;
+}
+.conversation_viewBox {
+	display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 15px 0 -14px;
+    border-collapse: separate;
+    border-spacing: 15px;
+    border: 1px solid rgb(150, 150, 150);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    border-radius: 8px;
+    padding: 0;
+    text-align: center;
+}
+.conversation_viewBox > p {
+	margin: auto ;
+	font-size: 30px;
+	font-weight: bold;
+}
+.conversation_viewBox > h3 {
+	margin-top: 15px ;
+	color: rgb(120,120,120);
+}
+.daily10word{
+	display: table;
+	table-layout: fixed;
+	margin: 25px 0 -14px;
+	border-collapse: separate;
+	border-spacing: 80px;
+	border: 1px solid;
+	border-radius: 8px;
+	padding: 0;
+	text-align: center;
+	float: left;
+	line-height: 200%
+}
+
+.dailyword_Box{
+	display:table;
+	text-align: center;
+	padding: 10px;
+    border-collapse: separate;
+    border-spacing: 15px;
+    border-radius: 8px;
+    width: 230px;
+    height: 80px;
+    margin: -100px;
+    table-layout: fixed;
+}
+
+.contact {
+	display: table;
+	margin: 769
+	px 0 -14px;
+	text-align: center;
+}
+
+#jlptword_view {
+	padding-top: 0;
+	border-top: 0;
+	margin: 63px 0 -14px;
+}
+
+.jlptword_viewBox {
+	display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 25px 0 -14px;
+    border-collapse: separate;
+    border-spacing: 15px;
+    border: 1px solid rgb(150, 150, 150);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    border-radius: 8px;
+    padding: 0;
+    text-align: center;
+    line-height: 130%
+}
+
+.jlptword_viewBox1 {
+	float: left;
+    display: table;
+    height: 80px;
+    table-layout: fixed;
+}
+.jlptword_viewBox1 > h2 {
+	color: rgb(255, 23, 68) ;
+	font-size: 14px ;
+	font-weight: bold ;
+	margin-right: 180px;
+}
+
+.jlptword_viewBox2 {
+	float: right;
+    display: table;
+    width: 309px;
+    height: 85px;
+    margin-right: 14px;
+    table-layout: fixed;
+}
+.jlptword_viewBox2 > h2 {
+	color: rgb(255, 23, 68) ;
+	font-size: 14px ;
+	font-weight: bold ;
+	margin-right: 200px;
+}
+.jlptword_group {
+	display: flex;
+	flex-direction: row;
+}
+.jlptword_group > p {
+	margin: 0 30px;
+	font-size: 36px ;
+	font-weight: bold ;
+}
+.jlptword_group > div {
+	margin-left: 40px;
+}
+.jlptword_group > div > h3{
+	font-size: 20px;
+	font-weight: bold;
+}
+#community_view {
+	padding-top: 0;
+	border-top: 0;
+	margin: 63px 0 -14px;
+	height: 10px;
+}
+
+.community_viewBox {
+	display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 15px 0 -14px;
+    border-collapse: separate;
+    border-spacing: 15px;
+    border: 1px solid rgb(150, 150, 150);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+    padding: 0;
+}
+
+.space {
+	margin: 200px 0 ;	
+}
+.title-group {
+	display: flex;
+	flex-direction:row;
+	justify-content: space-between;
+	font-weight: bold;
+}
+.title-group > h2 {
+	margin-left:20px;
+	font-size: 21px;
+}
+.title-group > a {
+	font-size: 16px;
+	margin-right: 270px;
+}

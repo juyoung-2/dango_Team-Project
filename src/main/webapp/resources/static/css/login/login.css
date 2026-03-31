@@ -1,0 +1,91 @@
+.login_area{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_page{
+    border:1px solid rgb(228, 228, 228);
+    width:400px;
+    height:560px;
+    box-shadow: 0 0 5px 1px rgb(197, 197, 197) ;
+}
+.login_logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+.login_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.login_input{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(77, 77, 77);
+    margin-left: 20px;
+    margin: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.login_inputbox{
+    border: 1px solid rgb(209, 209, 209);
+    margin-top: 10px;
+    height: 32px;
+}
+.login_buttonarea{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.login_button1{
+    background-color:#e22938;
+    color: white;
+    border: none;
+    margin:5px;
+    width: 360px;
+    height: 42px;
+}
+.login_button2{
+    color: rgb(88, 88, 88);
+    border: 1px solid rgb(207, 207, 207);
+    margin:5px;
+    width: 360px;
+    height: 42px;
+}
+.login_button1:hover{
+    background-color:#e94754;
+    transition: 0.5s;
+}
+.login_button2:hover{
+    border: 1px solid rgb(255, 99, 99);
+    color: rgb(255, 99, 99);
+    transition: 0.5s;
+}
+.login_bottom{
+    margin-top:25px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_id{
+    color: rgb(104, 104, 104);
+}
+.login_password{
+    color: rgb(104, 104, 104);
+}
+.login_id:hover{
+    color: #e94754;
+}
+.login_password:hover{
+    color: #e94754;
+}
